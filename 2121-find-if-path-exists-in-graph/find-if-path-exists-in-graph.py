@@ -1,6 +1,6 @@
 class Solution:
     def validPath(self, n: int, edges: List[List[int]], source: int, destination: int) -> bool:
-        adj={i:[] for i in range(n)}
+        adj=defaultdict(list)
         for u,v in edges:
             adj[u].append(v)
             adj[v].append(u)
